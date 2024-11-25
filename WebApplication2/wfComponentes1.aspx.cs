@@ -16,9 +16,37 @@ namespace WebApplication2
 
         protected void btnInserir_Click(object sender, EventArgs e)
         {
-            ListItem item = new ListItem(txtSite.Text, dlSite.Items.Count.ToString());
-            dlSite.Items.Add(item);
+            ListItem item = new ListItem(txtSite.Text, txtEndereco.Text);
+            lbEndereco.Items.Add(item);
+            txtEndereco.Text = string.Empty;
             txtSite.Text = "";
+
+            item = new ListItem(txtEndereco.Text, lbEndereco.Items.Count.ToString());
+            lbEndereco.Items.Add(item);
+            txtEndereco.Text = string.Empty;
+        }
+
+        protected void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            dlSite.Items.Clear();
+            /*ListItem li;
+            for (int i = 0; i< lbEndereco.Items.Count; i++)
+            {
+                li = lbEndereco.Items[i];
+                if (li.Selected) 
+                {
+                    li.Selected = false;
+                    dlSite.Items.Add(li);
+                }
+            }*/
+            foreach (ListItem item in lbEndereco.Items)
+            {
+                if (item.Selected) 
+                {
+                    item.Selected = false;
+                    dlSite.Items.Add(item);
+                }
+            }
         }
     }
 }

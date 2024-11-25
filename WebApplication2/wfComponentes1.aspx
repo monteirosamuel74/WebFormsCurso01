@@ -13,11 +13,14 @@
         .auto-style2 {
             width: 637px;
         }
+        .auto-style3 {
+            height: 272px;
+        }
     </style>
 </head>
-<body>
+<body style="height: 350px">
     <form id="form1" runat="server">
-        <div>
+        <div class="auto-style3">
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style1">Site</td>
@@ -32,20 +35,27 @@
                         <asp:TextBox ID="txtEndereco" runat="server" Width="628px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btnInserir" runat="server" OnClick="btnInserir_Click" Text="Inserir Site" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:DropDownList ID="dlSite" runat="server" Width="237px">
-                            <asp:ListItem Value="1">Monteiro Dev</asp:ListItem>
-                            <asp:ListItem Value="2">Monteiro Games</asp:ListItem>
-                        </asp:DropDownList>
+                        <asp:ListBox ID="lbEndereco" runat="server" Width="251px" SelectionMode="Multiple">
+                            <asp:ListItem Value="0">http://www.monteirodev.com.br/</asp:ListItem>
+                            <asp:ListItem Value="1">http://www.monteirogames.com.br/</asp:ListItem>
+                        </asp:ListBox>
                     </td>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2">
+                        Opções<br />
+                        <asp:Button ID="btnInserir" runat="server" OnClick="btnInserir_Click" Text="Inserir Site" />
+                        <asp:Button ID="btnSelecionar" runat="server" OnClick="btnSelecionar_Click" Text="Selecionar Site" />
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
+                        <asp:DropDownList ID="dlSite" runat="server" Width="237px">
+                            <asp:ListItem Value="0">Monteiro Dev</asp:ListItem>
+                            <asp:ListItem Value="1">Monteiro Games</asp:ListItem>
+                        </asp:DropDownList>
         </div>
     </form>
 </body>
