@@ -70,6 +70,7 @@
     <Content Include="Web.config" />
     <Content Include="wfComponentes1.aspx" />
     <Content Include="wfDiasDeVida.aspx" />
+    <Content Include="wfParImparFatorial.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="wfDiasDeVida.aspx.designer.cs">
       <DependentUpon>wfDiasDeVida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfParImparFatorial.aspx.cs">
+      <DependentUpon>wfParImparFatorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfParImparFatorial.aspx.designer.cs">
+      <DependentUpon>wfParImparFatorial.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
