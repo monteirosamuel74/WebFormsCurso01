@@ -12,8 +12,11 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 690b5903d8447d70287b58fe17d69f7a69bdc7c4
             if (!IsPostBack)
             {
                 pnParImpar.Visible = false;
@@ -69,6 +72,9 @@ namespace WebApplication2
             }
             lbResp2.Text = Convert.ToString(res);
             lbResp2.Visible = true;
+<<<<<<< HEAD
+>>>>>>> 690b5903d8447d70287b58fe17d69f7a69bdc7c4
+=======
 >>>>>>> 690b5903d8447d70287b58fe17d69f7a69bdc7c4
         }
     }
