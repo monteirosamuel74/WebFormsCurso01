@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Numerics;
 
 namespace WebApplication2
 {
@@ -50,19 +51,10 @@ namespace WebApplication2
         protected void Button1_Click(object sender, EventArgs e)
         {
             int numero = Convert.ToInt32(txtBoxFat.Text);
-            int res;
-            if (numero == 0 || numero == 1)
+            BigInteger res = 1;
+            for (int i = 1; i <= numero; i++)
             {
-                res = 1;
-            }
-            else
-            {
-                for (int i = numero; i >= 0; i--)
-                {
-                    res = numero * (numero - 1);
-                    res = res * i;
-                    numero--;
-                }
+                res *= i;
             }
             lbResp2.Text = Convert.ToString(res);
             lbResp2.Visible = true;
